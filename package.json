@@ -1,18 +1,18 @@
 {
-  "name": "react-tag-autocomplete",
-  "version": "5.8.0",
+  "name": "react-tag-autocomplete2",
+  "version": "1.0.1",
   "description": "React Tag Autocomplete is a simple tagging component ready to drop in your React projects.",
   "main": "dist-es5/ReactTags.js",
   "jsnext:main": "dist-es6/ReactTags.js",
   "scripts": {
     "pretest": "npm run lint && npm run build:es5",
     "test": "jasmine",
-    "coverage": "istanbul cover -i 'dist-es5/**' jasmine",
-    "lint": "standard lib/*.js spec/*.js",
-    "dev": "webpack-dev-server --progress --env.NODE_ENV=development",
+    "coverage": "npx istanbul cover -i 'dist-es5/**' jasmine",
+    "lint": "npx standard lib/*.js spec/*.js",
+    "dev": "npx webpack-dev-server --progress --env.NODE_ENV=development",
     "build:example": "webpack -p --env.NODE_ENV=production --config-name example",
-    "build:es5": "buble lib --objectAssign -o dist-es5",
-    "build:es6": "buble lib --objectAssign -o dist-es6 -t node:6",
+    "build:es5": "npx buble lib --objectAssign -o dist-es5",
+    "build:es6": "npx buble lib --objectAssign -o dist-es6 -t node:6",
     "prepublish": "npm run build:es5 && npm run build:es6"
   },
   "files": [
@@ -31,8 +31,9 @@
     "autosuggest",
     "autocomplete"
   ],
-  "author": "Matt Hinchliffe",
+  "author": "James Hu",
   "contributors": [
+    "Matt Hinchliffe",
     "Prakhar Srivastav",
     "Simon Hötten",
     "Andre-John Mas",
@@ -42,7 +43,7 @@
     "Axel Niklasson"
   ],
   "license": "MIT",
-  "repository": "https://github.com/i-like-robots/react-tags",
+  "repository": "https://github.com/gigahunter/react-tags",
   "peerDependencies": {
     "prop-types": "^15.0.0",
     "react": "^15.0.0 || ^16.0.0",
